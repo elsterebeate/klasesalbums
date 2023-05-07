@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://127.0.0.1:5500/galerija.html/klasesbildes.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mājaslapa_files/style.css" ;="">
+    
+    
+</head>
+<body text="teal">
+    
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+    <h1 style="text-align: center;">9.c klases albums</h1>
+
+    <div class="full-img" id="fullImgBox">
+        <img src="./mājaslapa_files/img1.jpg.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery">
+    
+        <img src="./mājaslapa_files/img1.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img2.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img3.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img4.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img5.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img6.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img7.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img8.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img9.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img10.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img11.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="./mājaslapa_files/img12.jpg.jpg" onclick="openFullImg(this.src)">
+</div>
+
+<script>
+
+    var fullImgBox= document.getElementById("fullImgBox");
+    var fullImg= document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display ="flex";
+        fullImg.src = pic;
+
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display ="none";
+    }
+
+
+
+</script>
+
+<!-- Code inject--></body></html>
